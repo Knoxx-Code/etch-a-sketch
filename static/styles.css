@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
+
 body
 {
     height: 100vh;
@@ -11,7 +12,7 @@ body
     background-color: #111111;
     color: white;
 }
-
+  
 header
 {
     display: flex;
@@ -27,6 +28,8 @@ header
     align-items: center;
     flex-direction: column;
 }
+
+
 .grid-container
 {
     display: grid;
@@ -39,14 +42,26 @@ header
 }
 
 
-
 .buttons
 {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    gap: 10px;
+}
+
+
+
+.options
+{
+    background-color: #8A2BE2;
+    color: #e5e7eb;
+    height: 40px;
+    border-radius: 6px;
     font-size: 18px;
 }
+
 
 #github-link{
     width: 20px;
