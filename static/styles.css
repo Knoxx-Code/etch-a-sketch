@@ -35,7 +35,7 @@ header
     display: grid;
     justify-content: center;
     border: #8A2BE2 solid 3px;
-    background-color: azure;
+    background-color: #e5e7eb;
     width: 600px;
     height: 600px;
     margin: 20px;
