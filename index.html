@@ -11,8 +11,10 @@
     <header>Etch-a-Sketch</header>
     <div class="main">
         <div class="buttons">
-            
-            <button class="options">Clear</button>
+            <label for="slider">Adjust Grid-size:</label>
+            <input id="slider" class="options" type="range" value="16" min="16" max="100">
+            <p id="slider-number">16</p>
+            <button id="clear" class="options">Clear</button>
         </div>
         <div class="grid-container"></div>
     </div>
