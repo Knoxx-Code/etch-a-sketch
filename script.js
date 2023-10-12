@@ -121,7 +121,12 @@ function handleActiveButton(activeButton)
         {
             button.removeEventListener('click',handleColors);
             button.removeEventListener('input',handleColors);
+            button.classList.remove('selected-button');
         }
+        else{
+            button.classList.add('selected-button');
+        }
+        
     })
 }
 

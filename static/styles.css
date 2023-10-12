@@ -94,3 +94,11 @@ header
     background-color: #333333;
     height: 25px;
 }
+
+/*For showing which button is selected*/
+.selected-button {
+    background-color: #8A2BE2; 
+    color: #fff;
+    box-shadow: 0 0 10px #e5e7eb; 
+    transition: box-shadow 0.3s ease; 
+}
