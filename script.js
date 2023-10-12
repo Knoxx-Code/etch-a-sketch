@@ -18,7 +18,7 @@ const eraser = document.querySelector("#eraser");
 const colorPicker = document.querySelector("#color-picker");
 
 
-
+//Function that creates the grid boxes and allows for their manipulatiion
 function manipulateGrid(dim)
 {
     gridContainer.style.gridTemplateRows = `repeat(${dim},1fr)`;
@@ -34,25 +34,30 @@ function manipulateGrid(dim)
         gridContainer.append(square);
     }
    
+    
     drawOnGrid();
     clearGrid();
     
 }
 
+//Function that clears the grid
 function clearGrid()
 {
     const gridboxes = document.querySelectorAll('.grid-box');
     clear.addEventListener('click',()=>{
+        //Loop through all the grid boxes and revert to background colour thus clearing it
        gridboxes.forEach( (box)=>{
             box.style.backgroundColor = '#e5e7eb';
        })
     })
 }
 
+//Function that updates the grid with the new grid size
 function updateGrid(newSize)
 {
+   
     sliderNumber.textContent = newSize;
-    //Clear the grid since there
+    //Clear the grid since there was an issue that retained colors when the grid size was changed
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
@@ -61,6 +66,8 @@ function updateGrid(newSize)
     
 }
 
+/*Function that listens for input changes on the slider and calls the updategrid function with 
+ the new size obtained from the slider*/
 function handleSliderEvents()
 {
     slider.addEventListener('input',(e)=>{
@@ -74,6 +81,14 @@ function handleSliderEvents()
     })
 }
 
+
+ //Call function that handles the slider events
+ handleSliderEvents();
+
+
+
+
+//Function that returns a random color code
 function getRandomColor()
 {
     //Letters that make up color code
@@ -96,6 +111,7 @@ const buttons = [blackButton,multiColorButton,eraser,colorPicker];
 let currentColor = 'black';
 
 
+//Functions that removes the on-click listener from the currently selected button
 function handleActiveButton(activeButton)
 {
     
@@ -109,6 +125,7 @@ function handleActiveButton(activeButton)
     })
 }
 
+//Function that changes to the relevant colour when the various buttons are clicked
 function handleColors()
 {
     // Current color is set to black
@@ -140,6 +157,8 @@ function handleColors()
 
 }
 
+
+//Function that handles the functionality drawing on grid
 function drawOnGrid()
 {
     //Function call for the function that handles color selection
@@ -175,8 +194,12 @@ function drawOnGrid()
    
 }
 
+
+
+
+//Call the manipulate grid function with the default size(16)
 manipulateGrid(16);
-handleSliderEvents();
+
 
 
 
