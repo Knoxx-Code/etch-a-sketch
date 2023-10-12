@@ -1,3 +1,5 @@
+//TODO: Progressive darkening. Custom slider perhaps
+
 
 //Grid container
 const gridContainer = document.querySelector(".grid-container");

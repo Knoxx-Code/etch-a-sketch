@@ -37,8 +37,9 @@ header
     border: #8A2BE2 solid 3px;
     background-color: #e5e7eb;
     width: 600px;
-    height: 600px;
-    margin: 20px;
+    height: 70vh;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 
@@ -64,6 +65,7 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 
