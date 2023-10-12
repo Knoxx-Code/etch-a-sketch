@@ -42,15 +42,29 @@ header
 }
 
 
-.buttons
+.buttons-container
 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     gap: 10px;
 }
 
+.slider-div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .options
