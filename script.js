@@ -33,7 +33,7 @@ function manipulateGrid(dim)
         square.classList.add('grid-box');
         gridContainer.append(square);
     }
-
+   
     drawOnGrid();
     clearGrid();
     
@@ -52,10 +52,13 @@ function clearGrid()
 function updateGrid(newSize)
 {
     sliderNumber.textContent = newSize;
+    //Clear the grid since there
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
-    createGrid(newSize);
+    //Call the function with the neew grid size
+    manipulateGrid(newSize);
+    
 }
 
 function handleSliderEvents()
